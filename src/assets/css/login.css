@@ -1,6 +1,164 @@
-.login-banner {
-    background: url("../img/Frame1699.png");
-    background-size: cover;
-    background-position: center;
-    overflow: hidden;
-  }
+.left-side {
+  background-image: url('../img/Frame1699.png');
+  background-position: 50%;
+  background-size: cover;
+}
+
+.left-side h1 {
+  word-wrap: break-word;
+  font-family: "Arabic Pro Bold";
+}
+
+.left-side p {
+  word-wrap: break-word;
+  font-family: "Arabic Pro Medium";
+}
+
+.right-side form>h1 {
+  word-wrap: break-word;
+  color: var(--headingColor);
+  font-family: Arabic Pro Bold;
+  font-size: 29px;
+  line-height: 31.9px;
+}
+.right-side .input-wrapper {
+  position: relative;
+}
+.right-side .input-wrapper>label {
+  word-wrap: break-word;
+  color: var(--headingColor);
+  display: block;
+  font-family: 'Arabic Pro Reg';
+  font-size: 14px;
+  line-height: 18.2px;
+}
+
+.right-side input {
+  word-wrap: break-word;
+  background: #0b0e2c;
+  border: 1px solid #2c2a4a;
+  color: var(--paragraphColor);
+  font-family: Arabic Pro Reg;
+  font-size: 14px;
+  height: 50px;
+  line-height: 18.2px;
+  outline: none;
+  width: 100%;
+}
+
+.right-side button {
+  background: linear-gradient(180deg,#42930e,#54aa1e 49%,#428f10);
+  height: 50px;
+}
+
+.right-side .dont-have-p {
+  word-wrap: break-word;
+  color: var(--paragraphColor);
+  font-family: 'Arabic Pro Medium';
+  font-size: 16px;
+  line-height: 20px;
+}
+.right-side .dont-have-p a {
+  color: #42930e;
+}
+
+.remember-me-portion a {
+  word-wrap: break-word;
+  color: var(--headingColor);
+  font-family: 'Arabic Pro Medium';
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.remember-me-portion .checkbox-wrapper>label {
+  word-wrap: break-word;
+  color: var(--paragraphColor);
+  font-family: 'Arabic Pro Medium';
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.line-breaker span {
+  border: 1px solid #2c2a4a;
+  height: 1px;
+}
+
+.line-breaker p {
+  word-wrap: break-word;
+  color: var(--paragraphColor);
+  font-family: 'Arabic Pro Medium';
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.tabs-wrapper button.active{
+  background: var(--innersecondaryColor);
+  border-bottom: 1px solid #ffc83e;
+  color: var(--headingColor);
+}
+
+.tabs-wrapper button{
+  word-wrap: break-word;
+  background: transparent;
+  border: 1px solid var(--innersecondaryColor);
+  border-radius: 8px;
+  color: var(--paragraphColor);
+  font-family: 'Arabic Pro Medium';
+  font-size: 14px;
+  line-height: 18.2px;
+}
+
+.agreement>h1 {
+  word-wrap: break-word;
+  color: var(--headingColor);
+  font-family: 'Arabic Pro Medium';
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.list-inner p {
+  word-wrap: break-word;
+  color: #959699;
+  font-family: Arabic Pro Reg;
+  font-size: 14px;
+  line-height: 18.2px;
+}
+
+.list-inner p a {
+  color: #42930e;
+}
+
+.CheckboxStyle label {
+  border: 2px solid #c7c8cf;
+  border: 2px solid var(--paragraphColor);
+  display: flex;
+}
+
+.CheckboxStyleSignUp label {
+  border-color: #52a81d;
+  border-radius: 2px;
+  height: 18px;
+  margin-top: 4px;
+  width: 18px;
+}
+
+.CheckboxStyleSignUp input:checked+label {
+  background-color: #52a81d;
+}
+
+.FlagSelect .head {
+  min-width: 92px;
+  width: 92px;
+}
+
+.FlagSelect .head {
+  word-wrap: break-word;
+  background: #0b0e2c;
+  border: 1px solid #2c2a4a;
+  color: var(--paragraphColor);
+  font-family: Arabic Pro Reg;
+  font-size: 14px;
+  height: 50px;
+  line-height: 18.2px;
+  outline: none;
+}

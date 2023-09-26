@@ -1,6 +1,5 @@
-import { Fragment, useRef, useState } from 'react'
+import { Fragment, useRef } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import clsx from 'clsx';
 import "../assets/css/login.css";
 
 import eye_icon from "../assets/img/eye-icon.svg";
@@ -11,23 +10,16 @@ import twitter_icon from "../assets/img/twitter_sign.svg";
 import telegram_icon from "../assets/img/telegram_sign.svg";
 import whatsapp_icon from "../assets/img/whatsapp_sign.svg";
 
-export default function Login({open, setOpen, title, setTitle}) {
-  const [ passVisible, setPassVisible ] = useState(false);
-  const [ rememberMe, setRememberMe ] = useState(false);
+export default function ResetPassword({open, setOpen, title, setTitle}) {
   const cancelButtonRef = useRef(null)
 
-  const onReset = (e) => {
+  const onLogin = (e) => {
     e.preventDefault();
-    setTitle('reset');
-  }
-
-  const onRegister = (e) => {
-    e.preventDefault();
-    setTitle('register_email');
+    setTitle('login');
   }
 
   return (
-    <Transition.Root show={open && title==='login'} as={Fragment}>
+    <Transition.Root show={open && title==='reset'} as={Fragment}>
       <Dialog as="div" className="relative z-[10000]" initialFocus={cancelButtonRef} onClose={setOpen}>
         <Transition.Child
           as={Fragment}
@@ -62,29 +54,14 @@ export default function Login({open, setOpen, title, setTitle}) {
                 </div>
                 <div className='right-side px-8 py-10 text-left'>
                   <form action="#" className="flex flex-col h-full">
-                    <h1 className="mb-12">Sign in</h1>
-                    <div className="input-wrapper">
+                    <h1 className="mb-12">Reset Password</h1>
+                    <div className="input-wrapper mt-5 mb-6">
                       <label htmlFor="email">Email / Phone Number</label>
                       <input type="text" placeholder="Jackrose11@gmail.com" id="email" className="rounded-lg px-6 mt-3" />
                     </div>
-                    <div className="input-wrapper mt-5 mb-9">
-                      <label htmlFor="password">Login Password</label><input type={passVisible ? "text" : "password"} placeholder="Enter your passwoard" id="password" className="rounded-lg px-6 mt-3" />
-                      <img src={eye_icon} className="eye-icon cursor-pointer absolute right-[22px] top-[47px]" alt="eye icon" onClick={() => setPassVisible(!passVisible)} />
-                    </div>
-                    <div className="flex items-center justify-between remember-me-portion">
-                      <div className="checkbox-wrapper flex items-center">
-                        <div className="m-0 p-0">
-                          <input type="checkbox" id="remember-me" className="hidden" />
-                          <label htmlFor="remember-me" className="cursor-pointer w-5 h-5 rounded-full flex items-center justify-center border-2 border-[#c7c8cf]" onClick={() => setRememberMe(!rememberMe)}>
-                            <span className={clsx("w-3 h-3 rounded-full block", rememberMe ? "bg-[#c7c8cf]" : '')}></span>
-                          </label>
-                        </div>
-                        <label htmlFor="" className="ml-1">Remember me</label>
-                      </div>
-                      <a href="/" onClick={onReset}>Forgot Password?</a>
-                    </div>
-                    <button className="w-full rounded-lg mt-4 mb-9">Sign In</button>
-                    <p className="dont-have-p">Don’t have an account! <a href="/" onClick={onRegister}>Sign up</a></p>
+
+                    <button className="w-full rounded-lg mt-4 mb-9">Reset Password</button>
+                    <p className="dont-have-p">Already have an account! <a href="/" onClick={onLogin}>Sign In</a></p>
                     <div className="ending-point  flex-1 flex flex-col  justify-end">
                       <div className="line-breaker flex items-center mt-8">
                         <span className="flex-1 mr-2"></span><p>Or Login with</p>
