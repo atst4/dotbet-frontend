@@ -1,0 +1,336 @@
+.home .welcome-area {
+  background: url("../img/bg-reward.png");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.home .welcome-area .rewardBanner {
+  position: absolute;
+  right: 15%;
+  transform: translateX(15%);
+  bottom: -5px;
+  height: 130%;
+}
+.home .welcome-area h1 {
+  color: var(--headingColor);
+  font-size: 36px;
+  font-family: Basis Grotesque Arabic Pro;
+  font-family: "Arabic Pro Bold";
+  line-height: 37.8px;
+  word-wrap: break-word;
+}
+
+.home .welcome-area p {
+  color: var(--paragraphColor);
+  font-size: 18px;
+  font-family: "Arabic Pro Medium";
+  line-height: 21.6px;
+  word-wrap: break-word;
+}
+.home .welcome-area .buttons-wrapper button {
+  color: var(--primaryColor);
+  font-family: "Arabic Pro bold";
+  font-size: 14px;
+  width: 250px;
+  line-height: 135%;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: #4d9f1a;
+  color: var(--headingColor);
+}
+.home .tags-wrapper {
+  grid-template-columns: 1fr 1fr 1.2fr 1.3fr 1fr 1fr 1.2fr;
+}
+.home .tags-wrapper > div {
+  background: #181637;
+  border-radius: 40px;
+  border: 1px #2c2a4a solid;
+  height: 42px;
+  width: 100%;
+}
+.home .tags-wrapper > div img {
+  width: 16px;
+  margin-right: 0.5rem;
+}
+.home .tags-wrapper > div.active {
+  background-color: #469711;
+}
+.home .tags-wrapper p {
+  color: var(--paragraphColor);
+  font-size: 14px;
+  font-family: "Arabic Pro Medium";
+  line-height: 18.2px;
+  word-wrap: break-word;
+}
+
+.home .splide__pagination__page {
+  background: #78797e;
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  margin: 3px 6px;
+}
+.home .splide__pagination__page.is-active {
+  border-radius: 99px;
+  width: 24px;
+  background: linear-gradient(180deg, #ffc83e 0%, #ffb700 49.48%, #d09500 100%);
+}
+
+.home .SliderAreaFirst .splide__pagination {
+  bottom: -2.2em;
+}
+.home .SliderAreaFirst li > img {
+  width: 100%;
+}
+.home .RecentWin .arrowareaslider {
+  position: relative;
+}
+.home .arrowareaslider .splide__arrows {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0px;
+  top: -45px;
+}
+.home .arrowareaslider .splide__arrows > * + * {
+  margin-left: 0.5rem;
+}
+.home .arrowareaslider .splide__arrow {
+  position: static !important;
+  background: #272547;
+}
+.home .arrowareaslider .splide__arrow svg {
+  fill: #fff !important;
+}
+.home .RecentWin .top h1 {
+  color: var(--headingColor);
+  font-family: "Arabic Pro Medium";
+  font-size: 23px;
+  font-style: normal;
+  line-height: 115%;
+}
+.home .RecentWin .top a {
+  font-family: "Arabic Pro Medium";
+  font-size: 16px;
+  font-style: normal;
+  line-height: 120%;
+  color: #469711;
+}
+
+.home .slider-wrapper-recent .card {
+  width: 100%;
+}
+.home .slider-wrapper-recent .card > img {
+  width: 100%;
+}
+.home .slider-wrapper-recent .card > .presentation {
+  background: var(--secondaryColor);
+}
+.home .slider-wrapper-recent .card > .presentation h1 {
+  color: var(--headingColor);
+  font-family: "Arabic Pro Reg";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 135%; /* 16.2px */
+}
+.home .slider-wrapper-recent .card > .presentation button:not(.text-xs) {
+  color: #c7c8cf;
+  font-size: 10px;
+  font-family: "Arabic Pro Reg";
+
+  line-height: 14px;
+  word-wrap: break-word;
+}
+.home .TopRatesGame .slider-wrapper-recent .card {
+  /* width: 179px; */
+  width: 100%;
+}
+.home .TopRatesGame .slider-wrapper-recent .card .presentation h1 {
+  color: var(--paragraphColor);
+}
+.home .TopRatesGame .slider-wrapper-recent .card .presentation button {
+  width: 100%;
+  color: var(--primaryColor) !important;
+  background-clip: unset;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  background: #469711;
+}
+
+/* LatestBets */
+.home .LatestBets .tabs-area ul li p {
+  font-size: 12px;
+}
+
+.home .LatestBets .table-area th {
+  color: var(--headingColor);
+  font-family: "Arabic Pro Medium";
+  font-size: 16px;
+  font-style: normal;
+  line-height: 125%;
+  height: 44px;
+  border: 1px solid var(--borderColor);
+  border-right: none;
+  border-left: none;
+  text-align: left;
+  padding-left: 1rem;
+}
+.home .LatestBets .table-area th:first-child,
+.home .LatestBets .table-area tbody td:first-child {
+  border-left: 1px solid var(--borderColor);
+}
+.home .LatestBets .table-area th:last-child,
+.home .LatestBets .table-area tbody td:last-child {
+  border-right: 1px solid var(--borderColor);
+  text-align: right;
+  padding-right: 2rem;
+}
+.home .LatestBets .table-area tbody td {
+  padding-left: 1rem;
+  color: #d0d1d2;
+  font-family: "Arabic Pro Medium";
+  font-size: 16px;
+  font-style: normal;
+  line-height: 125%; /* 20px */
+  height: 52px;
+  border: 1px solid var(--borderColor);
+  border-right: none;
+  border-left: none;
+}
+.home .LatestBets .table-area tbody tr:hover td {
+  background-color: var(--secondaryColor);
+}
+
+/* RegisterBanner */
+.home .RegisterBanner {
+  background-image: url("../img/bg-register.png");
+  background-position: center;
+  background-size: cover;
+}
+.home .RegisterBanner h1 {
+  width: 365px;
+  color: var(--headingColor);
+  font-family: "Arabic Pro Bold";
+  font-size: 27px;
+  font-style: normal;
+  line-height: 110%; /* 29.7px */
+}
+.home .RegisterBanner h1 span {
+  color: #ffc227;
+}
+.home .RegisterBanner p {
+  color: var(--headingColor);
+  font-family: "Arabic Pro Reg";
+  font-size: 16px;
+  font-style: normal;
+  line-height: 120%; /* 19.2px */
+}
+.home .RegisterBanner a {
+  background: linear-gradient(180deg, #ffc83e 0%, #ffb700 49.48%, #d09500 100%);
+  color: var(--primaryColor);
+  font-family: "Arabic Pro Bold";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 135%;
+}
+
+/* .home .body-right-area */
+.home .body-right-area {
+  min-width: 255px;
+  width: 255px;
+  background-color: var(--secondaryColor);
+  border: 1px solid var(--borderColor);
+  position: sticky;
+  top: 87px;
+}
+.home .body-right-area > .top-area {
+  border-bottom: 1px solid var(--borderColor);
+}
+.home .body-right-area > .top-area h1 {
+  color: var(--headingColor);
+  font-family: "Arabic Pro Reg";
+  font-size: 14px;
+  font-style: normal;
+  line-height: 130%; /* 18.2px */
+}
+.home .body-right-area > .top-area p {
+  color: var(--paragraphColor);
+  font-family: "Arabic Pro Reg";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 135%; /* 16.2px */
+  right: 45px;
+}
+.home .body-right-area > .top-area > div::after {
+  width: 5.56px;
+  height: 5.56px;
+  background-color: #44ec17;
+  border: 1px solid #000000;
+  border-radius: 50%;
+  position: absolute;
+  content: "";
+  right: 23px;
+  z-index: 3;
+  bottom: 15px;
+}
+.home .body-right-area > .top-area > div > *:first-child {
+  transform: translateX(20px);
+  z-index: 3;
+}
+.home .body-right-area > .top-area > div > *:nth-child(2) {
+  transform: translateX(10px);
+  z-index: 2;
+}
+
+/* comment box */
+.CommentCard {
+  border: 1px solid var(--borderColor);
+}
+.CommentCard .top-area h1 {
+  color: var(--headingColor);
+  font-family: "Arabic Pro Reg";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 135%; /* 16.2px */
+}
+.CommentCard .top-area p {
+  color: var(--paragraphColor);
+  font-family: "Arabic Pro Reg";
+  font-size: 8px;
+  font-style: normal;
+  line-height: 140%;
+}
+
+.CommentCard .right-area > p {
+  color: var(--paragraphColor);
+  font-family: "Arabic Pro Reg";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 130%; /* 15.6px */
+}
+.comment-area {
+  background-color: var(--secondaryColor);
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  left: 0px;
+}
+.comment-area input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--headingColor);
+  font-family: "Arabic Pro Reg";
+  font-size: 12px;
+  font-style: normal;
+  line-height: 130%;
+}
+.comment-area input::placeholder {
+  color: var(--paragraphColor);
+}
+.home .scroll-area-start {
+  overflow: auto;
+}
+.home .scroll-area-start::-webkit-scrollbar {
+  display: none;
+}

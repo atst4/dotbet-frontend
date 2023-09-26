@@ -1,0 +1,366 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primaryColor: #0c0e2c;
+  --secondaryColor: #181637;
+  --paragraphColor: #c7c8cf;
+  --innersecondaryColor: #272547;
+  --borderColor: #2c2a4a;
+  --headingColor: #fff;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Arabic Pro Medium";
+  src: url("./assets/font/BasisGrotesqueArabicPro-Medium.ttf");
+}
+@font-face {
+  font-family: "Arabic Pro Reg";
+  src: url("./assets/font/BasisGrotesqueArabicPro-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Arabic Pro Bold";
+  src: url("./assets/font/BasisGrotesqueArabicPro-Bold.ttf");
+}
+
+body {
+  background-color: var(--primaryColor);
+}
+aside {
+  background-color: var(--secondaryColor);
+  border: 1px solid var(--borderColor);
+  border-bottom-right-radius: 15px;
+  min-width: 113px;
+  width: 113px;
+  height: 100vh;
+  position: sticky;
+  top: 0px;
+}
+aside .bonus-area {
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+aside .bonus-area h1 {
+  color: #737190;
+  font-size: 12px;
+  font-family: "Arabic Pro Medium";
+  line-height: 16.2px;
+  word-wrap: break-word;
+  margin-top: 10px;
+}
+aside .bonus-area.active {
+  position: relative;
+}
+aside .bonus-area.active::before {
+  width: 3px;
+  height: 60px;
+  content: "";
+  position: absolute;
+  left: -17px;
+  top: 50%;
+  transform: rotate(180deg) translateY(-50%);
+  transform-origin: 0 0;
+  background: linear-gradient(180deg, #42930e 0%, #54aa1e 49%, #428f10 100%);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+aside .bonus-area.active::after {
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(180deg, #42930e 0%, #54aa1e 49%, #428f10 100%);
+  box-shadow: 61px 61px 61px;
+  border-radius: 9999px;
+  filter: blur(25px);
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+aside .bonus-area.active h1 {
+  color: var(--headingColor);
+}
+aside .bonus-area span {
+  font-family: "Arabic Pro Bold";
+  color: var(--primaryColor);
+  font-size: 10px;
+  line-height: 135%;
+  border-radius: 4px;
+  background: var(--Active, #46ca22);
+}
+
+aside .first-button-area p,
+aside .refer-button p {
+  font-family: "Arabic Pro Medium";
+  color: var(--headingColor);
+  font-size: 12px;
+  line-height: 135%;
+}
+aside .refer-button p {
+  font-family: "Arabic Pro Medium";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 135%; /* 18.9px */
+}
+aside .first-button-area > *:first-child {
+  background: linear-gradient(to right, #6d2a69, #433150);
+}
+aside .first-button-area > *:last-child {
+  background: linear-gradient(to right, #79642d, #48463c);
+}
+aside .refer-button {
+  background: linear-gradient(to right, #4c3e1a, #15191e, #15191e, #15191e);
+}
+
+aside .breaker {
+  margin-bottom: 30px;
+}
+
+.tabs-area ul {
+  background-color: var(--primaryColor);
+  padding: 0px;
+  height: 43px;
+  border: 1px solid var(--borderColor);
+}
+
+.tabs-area ul li > .shadow {
+  background: var(--innersecondaryColor);
+  box-shadow: 0px 4px 8px rgba(82.87, 86.63, 95.62, 0.4) inset;
+
+  /* background-color: var(--secondaryColor); */
+}
+.tabs-area ul li p {
+  color: var(--paragraphColor);
+  font-size: 14px;
+  font-family: "Arabic Pro Medium";
+  font-weight: 500;
+  line-height: 135%; /* 18.9px */
+  transition: 0.3s ease all;
+}
+.tabs-area ul li.active p {
+  color: var(--headingColor);
+}
+.tabs-area ul li > * {
+  pointer-events: none;
+}
+
+/* header area */
+header {
+  background-color: var(--secondaryColor);
+  border-bottom: 1px solid var(--borderColor);
+  position: sticky;
+  top: 0px;
+  z-index: 9999;
+}
+header .input-wrapper {
+  background-color: #0a0e2c;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 40px;
+  border: 1px solid var(--borderColor);
+}
+header .input-wrapper input {
+  background: transparent;
+  color: var(--paragraphColor);
+  font-size: 12px;
+  font-family: "Arabic Pro Reg";
+
+  word-wrap: break-word;
+}
+header .tabs-area ul {
+  height: 32px;
+  width: 204px;
+}
+header .select-bar > div {
+  background-color: var(--innersecondaryColor);
+  padding: 5px;
+}
+header .select-bar > div p {
+  color: var(--headingColor);
+  font-size: 12px;
+  font-family: "Arabic Pro Medium";
+  line-height: 135%; /* 16.2px */
+}
+header .select-bar > div p span {
+  color: var(--paragraphColor);
+}
+
+header .deposit-button {
+  background: #51a61c;
+  border: 1px solid #51a61c;
+  color: var(--headingColor);
+  font-family: "Arabic Pro Bold";
+  font-size: 12px;
+  width: 101px;
+  line-height: 135%; /* 16.2px */
+}
+
+header .login-btn {
+  background: transparent;
+}
+
+header .icon-buttons > button {
+  background-color: var(--innersecondaryColor);
+  border: 1px solid var(--borderColor);
+}
+
+header .Avatar {
+  border: 1px solid var(--borderColor);
+  padding: 2px;
+}
+header .Avatar .arrow-icon {
+  width: 10px;
+  height: 10px;
+  background-color: var(--borderColor);
+}
+header .Avatar .arrow-icon {
+  right: 1px;
+  bottom: 0px;
+}
+
+/* footer */
+footer {
+  background-color: var(--secondaryColor);
+}
+
+footer .footer-width {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer .left-area-footer-why h1,
+footer .logo-footer-area h1,
+footer .cols-footer-area h1 {
+  color: var(--headingColor);
+  font-size: 18px;
+  font-family: "Arabic Pro Medium";
+  line-height: 21.6px;
+  word-wrap: break-word;
+}
+footer .left-area-footer-why p,
+footer .logo-footer-area p,
+footer .cols-footer-area p {
+  color: var(--paragraphColor);
+  font-size: 14px;
+  font-family: "Arabic Pro Reg";
+  line-height: 18.2px;
+  word-wrap: break-word;
+}
+footer .left-area-footer-why h2 {
+  color: white;
+  font-size: 16px;
+  font-family: "Arabic Pro Medium";
+  line-height: 20px;
+  word-wrap: break-word;
+}
+footer .right-area-footer-why h1 {
+  color: var(--headingColor);
+  font-size: 18px;
+  font-family: "Arabic Pro Medium";
+  line-height: 21.6px;
+  word-wrap: break-word;
+}
+footer .right-area-footer-why textarea {
+  background-color: var(--primaryColor);
+  border: 1px solid var(--borderColor);
+  outline: none;
+
+  font-size: 14px;
+  font-family: "Arabic Pro Reg";
+  line-height: 18.2px;
+  word-wrap: break-word;
+}
+footer .right-area-footer-why textarea::placeholder {
+  color: var(--paragraphColor);
+}
+
+footer .right-area-footer-why button {
+  background: #469711;
+
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  display: inline-flex;
+  color: var(--primaryColor);
+  font-size: 16px;
+  font-family: "Arabic Pro Bold";
+  font-weight: 700;
+  line-height: 21.6px;
+  word-wrap: break-word;
+}
+
+footer .right-area-footer-why .submit p {
+  color: var(--paragraphColor);
+  font-size: 14px;
+  font-family: "Arabic Pro Reg";
+  line-height: 18.2px;
+  word-wrap: break-word;
+}
+footer .right-area-footer-why > p {
+  color: var(--paragraphColor);
+  font-size: 14px;
+  font-family: "Arabic Pro Reg";
+  line-height: 18.2px;
+  word-wrap: break-word;
+}
+footer .right-area-footer-why > p a {
+  color: #53a91c;
+}
+
+footer .list-area-footer ul .head {
+  color: var(--headingColor);
+  font-size: 16px;
+  font-family: "Arabic Pro Medium";
+  line-height: 20px;
+  word-wrap: break-word;
+  margin-bottom: 29px;
+}
+footer .list-area-footer ul li:not(.head) a {
+  color: var(--paragraphColor);
+  font-size: 14px;
+  font-family: "Arabic Pro Reg";
+  line-height: 18.2px;
+  word-wrap: break-word;
+  margin-bottom: 19px;
+}
+
+footer .logo-footer-area .right-area p {
+  width: 70%;
+}
+footer .cols-footer-area p span {
+  color: var(--headingColor);
+}
+
+footer .copyright-area p {
+  color: var(--paragraphColor);
+  font-size: 16px;
+  font-family: "Arabic Pro Reg";
+  line-height: 19.2px;
+  word-wrap: break-word;
+}
+
+footer .icons-wrapper h1 {
+  color: var(--headingColor);
+  font-size: 16px;
+  font-family: "Arabic Pro Medium";
+  line-height: 20px;
+  word-wrap: break-word;
+}
+footer .icons-wrapper a {
+  color: #51a61c;
+  font-size: 16px;
+  font-family: "Arabic Pro Medium";
+  line-height: 19.2px;
+  word-wrap: break-word;
+}
