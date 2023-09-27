@@ -1,7 +1,7 @@
 import { Fragment, useRef, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import clsx from 'clsx';
 import "../assets/css/login.css";
+import axios from 'axios';
 
 import eye_icon from "../assets/img/eye-icon.svg";
 import gmail_icon from "../assets/img/gmail_sign.svg";
@@ -13,7 +13,8 @@ import whatsapp_icon from "../assets/img/whatsapp_sign.svg";
 
 export default function RegisterEmail({open, setOpen, title, setTitle}) {
   const [ passVisible, setPassVisible ] = useState(false);
-  const cancelButtonRef = useRef(null)
+  const cancelButtonRef = useRef(null);
+  const emailRef = useRef(null);
 
   const onLogin = (e) => {
     e.preventDefault();
@@ -23,6 +24,31 @@ export default function RegisterEmail({open, setOpen, title, setTitle}) {
   const onRegisterPhone = (e) => {
     e.preventDefault();
     setTitle('register_phone');
+  }
+
+  const onRegister = async (e) => {
+    e.preventDefault();
+    const userdata = emailRef.current.value;
+
+    const options = {
+      method: 'POST',
+      url: 'https://' + process.env.REACT_APP_PUBLIC_AWC_HOST + '/wallet/createMember',
+      headers: {'content-type': 'application/x-www-form-urlencoded'},
+      data: {
+        cert: process.env.REACT_APP_PUBLIC_AWC_CERT,
+        agentId: process.env.REACT_APP_PUBLIC_AWC_AGENT_ID,
+        userId: userdata,
+        currency: 'THB',
+        language: 'en',
+        userName: userdata
+      }
+    };
+
+    await axios.request(options).then(function (response) {
+      console.log(response.data);
+    }).catch(function (error) {
+      console.error(error);
+    });
   }
 
   return (
@@ -60,7 +86,7 @@ export default function RegisterEmail({open, setOpen, title, setTitle}) {
                   </div>
                 </div>
                 <div className='right-side px-8 py-10 text-left'>
-                  <form action="#" className="flex flex-col h-full">
+                  <form action="#" className="flex flex-col h-full" onSubmit={onRegister}>
                     <h1 className="mb-3">Sign Up</h1>
                     <div className="grid grid-cols-2 tabs-wrapper gap-3 mb-5">
                       <button className="rounded-lg active">Email</button>
@@ -68,7 +94,7 @@ export default function RegisterEmail({open, setOpen, title, setTitle}) {
                     </div>
                     <div className="input-wrapper">
                       <label htmlFor="email">Email</label>
-                      <input type="text" placeholder="Jackrose11@gmail.com" id="email" className="rounded-lg px-6 mt-3" />
+                      <input type="text" placeholder="Jackrose11@gmail.com" ref={emailRef} id="email" className="rounded-lg px-6 mt-3" />
                     </div>
                     <div className="input-wrapper mt-4 mb-5">
                       <label htmlFor="password">Login Password</label><input type={passVisible ? "text" : "password"} placeholder="Enter your passwoard" id="password" className="rounded-lg px-6 mt-3" />
@@ -86,7 +112,7 @@ export default function RegisterEmail({open, setOpen, title, setTitle}) {
                         <input type="checkbox" id="user-agree" className="hidden" />
                         <label htmlFor="user-agree" className="cursor-pointer w-5 h-5 rounded-full flex items-center justify-center">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#181837" className="w-6 h-6">
-                            <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clip-rule="evenodd"></path>
+                            <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd"></path>
                           </svg>
                         </label>
                       </div>
@@ -97,7 +123,7 @@ export default function RegisterEmail({open, setOpen, title, setTitle}) {
                           <input type="checkbox" id="marketing" className="hidden" />
                           <label htmlFor="marketing" className="cursor-pointer w-5 h-5 rounded-full flex items-center justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#181837" className="w-6 h-6">
-                              <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clip-rule="evenodd"></path>
+                              <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd"></path>
                             </svg>
                           </label>
                         </div>
@@ -105,7 +131,7 @@ export default function RegisterEmail({open, setOpen, title, setTitle}) {
                       </div>
                     </div>
 
-                    <button className="w-full rounded-lg mt-4 mb-4">Sign Up</button>
+                    <button className="w-full rounded-lg mt-4 mb-4" type='submit'>Sign Up</button>
                     <p className="dont-have-p">Already have an account! <a href="/" onClick={onLogin}>Sign In</a></p>
                     <div className="ending-point  flex-1 flex flex-col  justify-end">
                       <div className="line-breaker flex items-center mt-3">

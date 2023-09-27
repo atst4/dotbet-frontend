@@ -11,6 +11,8 @@ import twitter_icon from "../assets/img/twitter_sign.svg";
 import telegram_icon from "../assets/img/telegram_sign.svg";
 import whatsapp_icon from "../assets/img/whatsapp_sign.svg";
 
+import axios from 'axios';
+
 export default function Login({open, setOpen, title, setTitle}) {
   const [ passVisible, setPassVisible ] = useState(false);
   const [ rememberMe, setRememberMe ] = useState(false);
@@ -25,6 +27,34 @@ export default function Login({open, setOpen, title, setTitle}) {
     e.preventDefault();
     setTitle('register_email');
   }
+
+  const onLogin = (e) => {
+    e.preventDefault();
+  }
+
+  // const options = {
+  //   method: 'POST',
+  //   url: 'https://tttint.onlinegames22.com/wallet/login',
+  //   headers: {'content-type': 'application/x-www-form-urlencoded'},
+  //   data: {
+  //     cert: 'GcPeqpy6yWScl6oMeMM',
+  //     agentId: 'luckyagent',
+  //     userId: 'testusercny',
+  //     isMobileLogin: 'false',
+  //     gameType: 'SLOT',
+  //     platform: 'RT',
+  //     language: 'en',
+  //     autoBetMode: '1'
+  //   }
+  // };
+
+  // axios.request(options).then(function (response) {
+  //   console.log(response.data);
+  // }).catch(function (error) {
+  //   console.error(error);
+  // });
+
+  
 
   return (
     <Transition.Root show={open && title==='login'} as={Fragment}>
