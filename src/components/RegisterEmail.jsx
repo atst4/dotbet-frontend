@@ -40,6 +40,7 @@ export default function RegisterEmail({open, setOpen, title, setTitle}) {
         userId: userdata,
         currency: 'THB',
         language: 'en',
+        betLimit: '%7B%22SEXYBCRT%22%3A%7B%22LIVE%22%3A%7B%22limitId%22%3A%5B280301%2C280303%2C280307%5D%7D%7D%2C%22VENUS%22%3A%7B%22LIVE%22%3A%7B%22limitId%22%3A%5B280301%2C280303%2C280307%5D%7D%7D%2C%22SV388%22%3A%7B%22LIVE%22%3A%7B%22maxbet%22%3A1000%2C%22minbet%22%3A1%2C%22mindraw%22%3A1%2C%22matchlimit%22%3A1000%2C%22maxdraw%22%3A100%7D%7D%7D',
         userName: userdata
       }
     };
