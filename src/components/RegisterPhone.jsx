@@ -104,7 +104,7 @@ export default function RegisterPhone({open, setOpen, title, setTitle}) {
                         <input type="checkbox" id="user-agree" className="hidden" />
                         <label htmlFor="user-agree" className="cursor-pointer w-5 h-5 rounded-full flex items-center justify-center">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#181837" className="w-6 h-6">
-                            <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clip-rule="evenodd"></path>
+                            <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd"></path>
                           </svg>
                         </label>
                       </div>
@@ -115,7 +115,7 @@ export default function RegisterPhone({open, setOpen, title, setTitle}) {
                           <input type="checkbox" id="marketing" className="hidden" />
                           <label htmlFor="marketing" className="cursor-pointer w-5 h-5 rounded-full flex items-center justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#181837" className="w-6 h-6">
-                              <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clip-rule="evenodd"></path>
+                              <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd"></path>
                             </svg>
                           </label>
                         </div>
