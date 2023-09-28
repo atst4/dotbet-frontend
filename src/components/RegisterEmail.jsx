@@ -1,3 +1,4 @@
+import React from "react";
 import { Fragment, useRef, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import "../assets/css/login.css";
@@ -30,6 +31,28 @@ export default function RegisterEmail({open, setOpen, title, setTitle}) {
     e.preventDefault();
     const userdata = emailRef.current.value;
 
+    var betLimit = {
+      "SEXYBCRT":{
+        "LIVE":{
+          "limitId":[280901,280902,280903,280904,280905]
+        }
+      },
+      "VENUS":{
+        "LIVE":{
+          "limitId":[280901,280902,280903,280904,280905]
+        }
+      },
+      "SV388":{
+        "LIVE":{
+          "maxbet":10000,
+          "minbet":1,
+          "mindraw":1,
+          "matchlimit":20000,
+          "maxdraw":4000
+        }
+      }
+    }
+
     const options = {
       method: 'POST',
       url: 'https://' + process.env.REACT_APP_PUBLIC_AWC_HOST + '/wallet/createMember',
@@ -40,7 +63,7 @@ export default function RegisterEmail({open, setOpen, title, setTitle}) {
         userId: userdata,
         currency: 'THB',
         language: 'en',
-        betLimit: '{"BG":{"LIVE":{"limitId":["H4","J4","H7","N1","I"]}}, "HORSEBOOK":{"LIVE":{"minbet":50,"maxbet":5000,"maxBetSumPerHorse":30000,"minorMinbet":50, "minorMaxbet":5000, "minorMaxBetSumPerHorse":15000}}, "PP":{"LIVE":{"limitId":["G1"]}}}',
+        betLimit: JSON.stringify(betLimit),
         userName: userdata
       }
     };
