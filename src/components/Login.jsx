@@ -12,8 +12,6 @@ import twitter_icon from "../assets/img/twitter_sign.svg";
 import telegram_icon from "../assets/img/telegram_sign.svg";
 import whatsapp_icon from "../assets/img/whatsapp_sign.svg";
 
-import axios from 'axios';
-
 export default function Login({open, setOpen, title, setTitle}) {
   const [ passVisible, setPassVisible ] = useState(false);
   const [ rememberMe, setRememberMe ] = useState(false);

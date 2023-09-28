@@ -142,7 +142,6 @@ export default function RegisterPhone ({ open, setOpen, title, setTitle }) {
                       </svg>
                     </div>
 
-<<<<<<< HEAD
                     <div className="agreement-list mt-4"><div className="list-inner flex items-start">
                       <div className="CheckboxStyle CheckboxStyleSignUp">
                         <input type="checkbox" id="user-agree" className="hidden" />
@@ -160,31 +159,6 @@ export default function RegisterPhone ({ open, setOpen, title, setTitle }) {
                           <label htmlFor="marketing" className="cursor-pointer w-5 h-5 rounded-full flex items-center justify-center">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#181837" className="w-6 h-6">
                               <path fillRule="evenodd" d="M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z" clipRule="evenodd"></path>
-=======
-                    <div className='agreement-list mt-4'>
-                      <div className='list-inner flex items-start'>
-                        <div className='CheckboxStyle CheckboxStyleSignUp'>
-                          <input
-                            type='checkbox'
-                            id='user-agree'
-                            className='hidden'
-                          />
-                          <label
-                            htmlFor='user-agree'
-                            className='cursor-pointer w-5 h-5 rounded-full flex items-center justify-center'
-                          >
-                            <svg
-                              xmlns='http://www.w3.org/2000/svg'
-                              viewBox='0 0 24 24'
-                              fill='#181837'
-                              className='w-6 h-6'
-                            >
-                              <path
-                                fillRule='evenodd'
-                                d='M19.916 4.626a.75.75 0 01.208 1.04l-9 13.5a.75.75 0 01-1.154.114l-6-6a.75.75 0 011.06-1.06l5.353 5.353 8.493-12.739a.75.75 0 011.04-.208z'
-                                clipRule='evenodd'
-                              ></path>
->>>>>>> 2cc4c9a94dce4bde39ac5586c5ae1d271c2299bc
                             </svg>
                           </label>
                         </div>

@@ -32,14 +32,29 @@ export default function RegisterEmail({open, setOpen, title, setTitle}) {
     const userdata = emailRef.current.value;
 
     var betLimit = {
+      "HORSEBOOK": {
+        "LIVE":{
+          "minbet":50,
+          "maxbet":5000,
+          "maxBetSumPerHorse":30000,
+          "minorMinbet":50,
+          "minorMaxbet":5000,
+          "minorMaxBetSumPerHorse":15000
+        }
+      },
+      "PP": {
+        "LIVE":{
+          "limitId":["G1"]
+        }
+      },
       "SEXYBCRT":{
         "LIVE":{
-          "limitId":[280901,280902,280903,280904,280905]
+          "limitId":[280901,280902,280904]
         }
       },
       "VENUS":{
         "LIVE":{
-          "limitId":[280901,280902,280903,280904,280905]
+          "limitId":[280902,280903]
         }
       },
       "SV388":{
