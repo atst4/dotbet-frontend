@@ -31,6 +31,10 @@ export default function RegisterEmail({open, setOpen, title, setTitle}) {
     e.preventDefault();
     const userdata = emailRef.current.value;
 
+    if (!userdata.length) {
+      return;
+    }
+
     var betLimit = {
       "HORSEBOOK": {
         "LIVE":{
